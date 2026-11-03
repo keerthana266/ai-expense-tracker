@@ -1,0 +1,144 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.viewAllLink {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.txList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.txRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.iconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.iconSwiggy {
+  background: rgba(249, 115, 22, 0.12);
+  color: #F97316;
+}
+
+.iconAmazon {
+  background: rgba(234, 179, 8, 0.14);
+  color: #CA8A04;
+}
+
+.iconSalary {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+}
+
+.iconUber {
+  background: rgba(15, 23, 42, 0.1);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .iconUber {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.iconDefault {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.merchant {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.amount {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.amountPositive {
+  color: #10B981;
+}
+
+.amountNegative {
+  color: var(--text);
+}
+
+.expandBtn {
+  margin-top: 12px;
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.expandBtn:hover {
+  background: var(--primary-light);
+}

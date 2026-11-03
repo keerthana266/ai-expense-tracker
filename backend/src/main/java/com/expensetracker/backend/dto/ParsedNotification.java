@@ -9,4 +9,5 @@ public class ParsedNotification {
     private Double amount;
     private String paymentMethod;
     private String category;
+    private String transactionType = "EXPENSE";
 }

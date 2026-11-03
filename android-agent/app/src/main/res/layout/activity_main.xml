@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#0F172A">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ExpenseAI Agent"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#F8FAFC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zero-Manual Entry Background Notification Listener"
+        android:textSize="14sp"
+        android:textColor="#94A3B8"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="● Checking permissions..."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#F59E0B"
+        android:padding="12dp"
+        android:background="#1E293B"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnPermission"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Grant Notification Access"
+        android:backgroundTint="#3B82F6"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Backend URL"
+        android:textColor="#CBD5E1"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edtBackendUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="http://192.168.1.10:8080"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#64748B"
+        android:backgroundTint="#64748B"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User JWT Token"
+        android:textColor="#CBD5E1"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edtToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Paste JWT token from web dashboard"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#64748B"
+        android:backgroundTint="#64748B"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save Configuration"
+        android:backgroundTint="#10B981"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSimulate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🚀 Simulate Test Payment (Zomato ₹380)"
+        android:backgroundTint="#6366F1"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

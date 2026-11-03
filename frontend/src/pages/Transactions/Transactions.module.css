@@ -1,0 +1,261 @@
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background: var(--background, #f5f7fb);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 28px 30px 40px;
+  box-sizing: border-box;
+  background: var(--background, #f5f7fb);
+  color: var(--text, #171c2b);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: var(--text, #171c2b);
+}
+
+.header p {
+  margin: 7px 0 0;
+  color: var(--text-light, #8b93a7);
+  font-size: 14px;
+}
+
+.addButton {
+  border: none;
+  background: #6c5ce7;
+  color: #ffffff;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: #5b4bd6;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.summaryCard {
+  background: var(--card, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow, 0 6px 20px rgba(30, 35, 60, 0.05));
+}
+
+.summaryCard span {
+  display: block;
+  color: var(--text-light, #8b93a7);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.summaryCard strong {
+  font-size: 23px;
+  color: var(--text, #171c2b);
+}
+
+.income {
+  color: #16a34a !important;
+}
+
+.expense {
+  color: #ef4444 !important;
+}
+
+.tableCard {
+  background: var(--card, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow, 0 6px 20px rgba(30, 35, 60, 0.05));
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.tableHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--text, #171c2b);
+}
+
+.tableHeader p {
+  margin: 6px 0 0;
+  color: var(--text-light, #8b93a7);
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters select {
+  border: 1px solid var(--border, #e5e7ef);
+  background: var(--card, #ffffff);
+  padding: 10px 13px;
+  border-radius: 10px;
+  color: var(--text, #596174);
+  outline: none;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableCard table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.tableCard th {
+  text-align: left;
+  color: var(--text-light, #9aa1b2);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--border, #edf0f5);
+}
+
+.tableCard td {
+  padding: 17px 10px;
+  border-bottom: 1px solid var(--border, #f0f2f6);
+  color: var(--text-light, #5e6678);
+  font-size: 13px;
+}
+
+.tableCard tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tableCard tbody tr:hover {
+  background: rgba(108, 92, 231, 0.04);
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction strong {
+  display: block;
+  color: var(--text, #252b3a);
+  font-size: 14px;
+}
+
+.transaction span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-light, #9aa1b2);
+  font-size: 12px;
+}
+
+.icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.expenseIcon {
+  background: #fff0f1;
+  color: #ef4444;
+}
+
+.incomeIcon {
+  background: #eafaf0;
+  color: #22c55e;
+}
+
+/* Dark-mode refinements */
+:global(:root[data-theme="dark"]) .summaryCard,
+:global(:root[data-theme="dark"]) .tableCard {
+  background: var(--card, #1f2937);
+  border-color: var(--border, #374151);
+}
+
+:global(:root[data-theme="dark"]) .filters select {
+  color: var(--text, #f3f4f6);
+}
+
+:global(:root[data-theme="dark"]) .filters select option {
+  background: var(--card, #1f2937);
+  color: var(--text, #f3f4f6);
+}
+
+:global(:root[data-theme="dark"]) .tableCard tbody tr:hover {
+  background: rgba(167, 139, 250, 0.08);
+}
+
+@media (max-width: 1100px) {
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 20px;
+  }
+
+  .header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .tableHeader {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .filters select {
+    flex: 1;
+    min-width: 0;
+  }
+}

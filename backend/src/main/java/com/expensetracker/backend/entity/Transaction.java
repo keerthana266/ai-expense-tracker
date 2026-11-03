@@ -1,5 +1,7 @@
 package com.expensetracker.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,9 +24,6 @@ public class Transaction {
     private Double amount;
 
     @Column(nullable = false)
-    private String merchant;
-
-    @Column(nullable = false)
     private LocalDateTime transactionTime;
 
     @Column(nullable = false)
@@ -39,18 +38,42 @@ public class Transaction {
     @Column(nullable = false)
     private Double aiConfidence;
 
-    @Column(length = 1000)
+    @Column(length = 2000)
     private String notificationText;
 
-    @ManyToOne
+    @Column(length = 1000)
+    private String aiReasoning;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "account_id")
-    private Account account;
+   @ManyToOne(fetch = FetchType.LAZY)
+   @JoinColumn(name = "account_id")
+   @JsonIgnoreProperties({
+        "transactions",
+        "user",
+        "hibernateLazyInitializer",
+        "handler"
+   })
+   private Account account;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties({
+            "transactions",
+            "hibernateLazyInitializer",
+            "handler"
+    })
     private Category category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "merchant_id")
+    @JsonIgnoreProperties({
+            "transactions",
+            "hibernateLazyInitializer",
+            "handler"
+    })
+    private Merchant merchant;
 }

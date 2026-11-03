@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+
+  /* Brand / Primary */
+  --primary: #6C5DD3;
+  --primary-light: #F0EDFF;
+  --primary-hover: #5B4DC2;
+  --secondary: #8B5CF6;
+
+  /* Surfaces & Backgrounds */
+  --background: #F4F6F9;
+  --sidebar-bg: #FFFFFF;
+  --card: #FFFFFF;
+  --card-border: #EEF2F6;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+
+  /* Typography */
+  --text: #1E293B;
+  --text-muted: #8F9CAE;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+
+  /* Accents */
+  --success: #10B981;
+  --success-light: #D1FAE5;
+  --danger: #F43F5E;
+  --danger-light: #FFE4E6;
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+
+  /* Chart & Category Palette */
+  --cat-purple: #6C5DD3;
+  --cat-pink: #EC4899;
+  --cat-orange: #F97316;
+  --cat-blue: #06B6D4;
+  --cat-gray: #94A3B8;
+
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Brand / Primary */
+  --primary: #8B5CF6;
+  --primary-light: rgba(139, 92, 246, 0.16);
+  --primary-hover: #7C3AED;
+  --secondary: #A78BFA;
+
+  /* Surfaces & Backgrounds (Exact Dark Navy from Target Image) */
+  --background: #090D16;
+  --sidebar-bg: #0D121F;
+  --card: #131B2E;
+  --card-border: #1E293B;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.38);
+
+  /* Typography */
+  --text: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-secondary: #CBD5E1;
+  --border: #1E293B;
+
+  /* Accents */
+  --success: #34D399;
+  --success-light: rgba(52, 211, 153, 0.15);
+  --danger: #FB7185;
+  --danger-light: rgba(251, 113, 133, 0.15);
+  --warning: #FBBF24;
+  --warning-light: rgba(251, 191, 36, 0.15);
+
+  /* Chart & Category Palette */
+  --cat-purple: #8B5CF6;
+  --cat-pink: #F472B6;
+  --cat-orange: #FB923C;
+  --cat-blue: #38BDF8;
+  --cat-gray: #64748B;
+
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}

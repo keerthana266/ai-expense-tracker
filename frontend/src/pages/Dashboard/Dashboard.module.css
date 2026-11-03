@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 22px 26px 36px;
+  box-sizing: border-box;
+}
+
+/* 3-Column Grid matching Image 2 */
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.85fr) minmax(280px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+/* Left Column */
+.colLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.subCardRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.subCardItem {
+  min-width: 0;
+}
+
+/* Middle Column */
+.colMiddle {
+  min-width: 0;
+  height: 100%;
+}
+
+/* Right Column */
+.colRight {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+/* Lower Section: Broke Date Pacer & AI Actions */
+.lowerSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.pacerContainer,
+.actionsContainer {
+  min-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1300px) {
+  .mainGrid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(270px, 0.9fr);
+  }
+  .colRight {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    padding: 16px;
+  }
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+  .colRight {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .subCardRow {
+    grid-template-columns: 1fr;
+  }
+  .lowerSection {
+    grid-template-columns: 1fr;
+  }
+}

@@ -32,7 +32,10 @@ public class NotificationService {
 
         // Parse notification
         ParsedNotification parsed = parserService.parse(request.getNotificationText());
-        transactionService.saveTransaction(parsed);
+        transactionService.saveTransaction(
+                parsed,
+                request.getNotificationText()
+        );
         
         System.out.println("========== PARSED NOTIFICATION ==========");
         System.out.println("Merchant : " + parsed.getMerchant());
