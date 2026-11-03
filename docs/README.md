@@ -1,4 +1,4 @@
-# ExpenseAI 💰
+# ExpenseAI 
 
 **ExpenseAI** is an AI-powered expense tracker that helps users manage their spending and understand their financial habits.
 
